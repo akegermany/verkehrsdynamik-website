@@ -1,0 +1,63 @@
+
+Verkehrsdynamische Modelle haben in den letzten 20 Jahren enorm an
+Bedeutung gewonnen. Simulationstechniken werden beispielsweise für die
+Verkehrslageschätzung und -prognose, die Abschätzung von
+Verkehrsbeeinflussungsmaßnahmen und Fahrerassistenzsystemen, zur
+detaillierten Verbrauchs- und Emissionsberechnung oder zur
+Erzeugung realistischen Umgebungsverkehrs in Verkehrssimulatoren
+verwendet. Weiterhin haben die Modelle wesentlich zum grundsätzlichen
+Verständnis der Stauphänomene im Straßenverkehr beigetragen.
+
+Das Lehrbuch "Verkehrsdynamik und -simulation" bietet erstmals eine
+umfassende und didaktische Darstellung der verschiedenen Modelle,
+welche bisher nur in der englischsprachigen Originalliteratur
+verfügbar waren. Es richtet sich an Studierende im Verkehrsbereich und
+in den Naturwissenschaften mit interdisziplinärer Ausrichtung. Es
+bietet aber auch Ingenieuren in der Berufswelt eine gute Übersicht
+über wesentliche Ansätze und neuere Simulationsmodelle.
+
+Das Buch besteht aus drei Hauptteilen. Im ersten Teil werden
+verschiedene Kategorien von Verkehrsdaten für die
+Verkehrsflussmodellierung eingeführt und anhand empirischer Daten die
+Phänomene der Verkehrsdynamik wie z.B. Stop-and-Go-Verkehr
+vorgestellt. 
+
+Den Schwerpunkt des Buches bildet der zweite Teil, der
+sich der Beschreibung der Verkehrsdynamik mit Hilfe mathematischer
+Modelle widmet. Nach einem Übersichtskapitel über die
+verschiedenen Modellklassen 
+werden zunächst makroskopische Modelle und anschließend mikroskopische
+Modelle ausführlich betrachtet. Während bei den Mikromodellen die
+einzelnen Fahrzeuge betrachtet werden, beschreiben Makromodelle den
+Systemzustand des Verkehrs durch wenige Variablen wie Verkehrsfluss,
+Verkehrsdichte und mittlere Geschwindigkeit. Neben einer Darstellung
+konkreter Modelle werden für beide Modellklassen allgemeine
+Plausibilitäts- und Qualitätskriterien ausgearbeitet, die in dieser
+kompakten Form auch in der Originalliteratur nicht zu finden sind.
+Für eine mikroskopische Beschreibung des Verkehrs werden anschließend 
+Modelle für diskrete Entscheidungen, wie z.B. Spurwechseln oder Einfahrt 
+in eine vorfahrtsberechtigte Straße vorgestellt. Schließlich
+werden die verschiedenen Arten von Verkehrsinstabilitäten
+analysiert. Die Modellannahmen und die resultierenden Eigenschaften
+werden systematisch und anschaulich beschrieben. Die vollständige und
+formale Darstellung der Modelle ermöglicht es dem Leser, dynamische
+Verkehrsflussmodelle zu verstehen und selbständig einsetzen zu können.
+
+Im dritten Teil des Buches werden ausgewählte Anwendungen der
+dargestellten Konzepte und Modelle thematisiert. Es werden die
+Entstehung und Ausbreitung von Staus, die Grundlagen der
+Verkehrslageschätzung, die Berechnung von Reisezeiten, ein Modell zur
+detaillierten Kraftstoffverbrauchs- und Emissionsberechnung sowie
+Anwendungen der Verkehrstelematik besprochen. 
+
+Zahlreiche, auch farbige Abbildungen illustrieren die Sachverhalte
+sowie Modelleigenschaften. Im Haupttext dienen kleinere Aufgaben und
+Fragen zur Anregung und Kontrolle des eigenen Verständnisses. Die
+einzelnen Kapitel enthalten Literaturhinweise und zahlreiche
+Übungsaufgaben mit ausführlichen Lösungen. 
+
+
+
+
+
+
