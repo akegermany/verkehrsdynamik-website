@@ -53,8 +53,13 @@
 
 
 <div id="wrap">
-        
-		<div id="content">
+<div id="content">
+
+<p class="p1">
+
+<a class="image" href="res/ErrataVerkehrsdynamik.pdf"><img src="img/pdf1.gif" alt="Errata zum Buch"/></a>
+<a href="res/ErrataVerkehrsdynamik.pdf"><b>Errata-Liste der Druckfehler</b></a>
+		
             <p class="p1">
 Über Hinweise auf Fehler im Buch freuen wir uns. Weniger über die Fehler, dafür um so mehr über die Hinweise. Und Verständnisfragen beantworten wir auch gerne per Email. </p>
 

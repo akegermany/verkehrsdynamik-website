@@ -5,7 +5,7 @@
             <ul id="nav">
     		<li id="t-buch"><a href="ueberDasBuch.shtml">Über das Buch</a></li>
 			<li id="t-rezensionen"><a href="rezensionen.shtml">Rezensionen</a></li> 
-            <li id="t-fragen"><a href="fragen.shtml">Fragen und Antworten</a></li>
+            <li id="t-fragen"><a href="errata.shtml">Errata</a></li>
             <li id="t-simulator"><a href="simulation.shtml">Interaktive Simulation</a></li>
             <li id="t-movsim"><a href="movsim.shtml">MovSim</a></li>
           <!--  <li id="t-links"><a href="links.shtml">Links</a></li> -->
