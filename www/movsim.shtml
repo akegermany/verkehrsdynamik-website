@@ -4,7 +4,9 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="description" content="Verkehrsdynamik und Simulation: Lehrbuch von Treiber/Kesting." />
 <meta name="keywords" content="Verkehr, Verkehrsdynamik, Verkehrssimulation, Lehrbuch, Treiber, Kesting" />
+
 <link href="css/haupt.css" type="text/css" media="screen" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
                                                                                                
 <script type="text/javascript"> <!--
     function UnCryptMailto( s )

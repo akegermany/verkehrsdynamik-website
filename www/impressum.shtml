@@ -1,11 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head profile="http://gmpg.org/xfn/11">
+
 <title>Verkehrsdynamik und -simulation &middot; Springer-Lehrbuch</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="description" content="Verkehrsdynamik und Simulation: Lehrbuch von Treiber/Kesting." />
 <meta name="keywords" content="Verkehr, Verkehrsdynamik, Verkehrssimulation, Lehrbuch, Treiber, Kesting" />
+
 <link href="css/haupt.css" type="text/css" media="screen" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+
 <script type="text/javascript"> <!--
     function UnCryptMailto( s )
     {

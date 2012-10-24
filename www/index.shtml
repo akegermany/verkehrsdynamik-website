@@ -6,7 +6,7 @@
 <meta name="description" content="Verkehrsdynamik und Simulation: Lehrbuch von Treiber/Kesting." />
 <meta name="keywords" content="Verkehr, Verkehrsdynamik, Verkehrssimulation, Verkehrsflussdynamik, Stau, Stauentstehung, Lehrbuch, Treiber, Kesting" />
 <link href="css/haupt.css" type="text/css" media="screen" rel="stylesheet"/>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 
 <script type="text/javascript"> <!--
     function UnCryptMailto( s )
