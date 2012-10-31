@@ -55,6 +55,7 @@
 
 
 <div id="wrap">
+
 <div id="content">
 
 <p class="p1">Verkehrsdynamische Modelle haben in den letzten 20 Jahren an
@@ -75,7 +76,7 @@ bietet aber auch Ingenieuren in der Berufswelt eine gute Übersicht
 <p><a href="ueberDasBuch.shtml">... mehr Infos über das Buch</a></p>
 
 <p class="p1">
-Über Feedback und Hinweise auf Fehler im Buch freuen wir uns. Eine Liste der <a href="res/ErrataVerkehrsdynamik.pdf">Errata</a> wird regelmäßig aktualisiert.</p>
+Über Feedback und Hinweise auf Fehler im Buch per Email freuen wir uns. Eine Liste der <a href="res/ErrataVerkehrsdynamik.pdf">Errata</a> wird regelmäßig aktualisiert.</p>
 
 <p class="plink">
 <a href="javascript:linkTo_UnCryptMailto('nbjmup;usfjcfsAwxj/uv.esftefo/ef');">treiber@vwi.tu-dresden.de</a>
@@ -83,7 +84,7 @@ bietet aber auch Ingenieuren in der Berufswelt eine gute Übersicht
 <a href="javascript:linkTo_UnCryptMailto('nbjmup;nbjmAblftujoh/ef');">mail@akesting.de</a>
 </p>
 </div>
-</div>
+
 		
 
 <!--#include file="sidebar.shtml" -->

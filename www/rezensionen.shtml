@@ -18,11 +18,16 @@
 	
 	<div id="content">
 	
+	   <h5><a href="http://www.pro-physik.de/details/rezension/1391665/Verkehrsdynamik_und_-simulation.html">Physik Journal (November 2011)</a></h5>
+	   
         <p class="p1">[...] Mit dem Buch von Treiber und Kesting liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt. [...] Durch die inhaltliche Breite der Darstellung spricht das Buch unterschiedliche Zielgruppen an. Zum einen ist es durchaus auch für Experten interessant, beispielsweise aufgrund der ausführlichen Darstellung der diversen Modellklassen und ihrer Eigenschaften. Zum anderen kann es sehr gut als Grundlage oder Ergänzung für Vorlesungen (etwa über Mechanik oder statistische Physik) dienen. [...] </p>
-        <p class="questioner"><a href="http://www.pro-physik.de/details/rezension/1391665/Verkehrsdynamik_und_-simulation.html">Prof. Dr. Andreas Schadschneider, Ins­titut für Theoretische Physik und Ins­titut für Physik­didaktik, Universität zu Köln (09. November 2011)</p>       
+        <p class="questioner">Prof. Dr. Andreas Schadschneider, Ins­titut für Theoretische Physik und Ins­titut für Physik­didaktik, Universität zu Köln</p>       
 
- <p class="p1">Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. Die freie Entscheidung, ob man bremst oder nicht - gibt es nicht mehr. Das Auto wird zum berechenbaren Teilchen. [...] Die Verkehrsfluss-Forscher Martin Treiber und Arne Kesting haben im Herbst 2010 das erste deutschsprachige Lehrbuch zu diesem Thema vorgestellt. [...] </p>
-        <p class="questioner"><a href="res/rezension_automobilrevue_15Jan2011_Nr1.png">RAK, <a href="http://www.automobilrevue.ch/">Automobilrevue</a> (15. Januar 2011)</p>       
+<br>
+
+		<h5><a href="http://www.automobilrevue.ch/">Automobilrevue (Januar 2011)</a></h5>
+        <p class="p1">Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. Die freie Entscheidung, ob man bremst oder nicht - gibt es nicht mehr. Das Auto wird zum berechenbaren Teilchen. [...] Die Verkehrsfluss-Forscher Martin Treiber und Arne Kesting haben im Herbst 2010 das erste deutschsprachige Lehrbuch zu diesem Thema vorgestellt. [...] <a href="res/rezension_automobilrevue_15Jan2011_Nr1.png">[link]</a></p>
+        <p class="questioner">Rainer Klose</p> 
 
         <!--<blockquote>
             <cite>&#8212; Winston Churchill, 1954</cite>
