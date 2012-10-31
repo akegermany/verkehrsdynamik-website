@@ -3,8 +3,6 @@
 <head profile="http://gmpg.org/xfn/11">
 <title>Verkehrsdynamik und -simulation &middot; Springer-Lehrbuch</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta name="description" content="Verkehrsdynamik und Simulation: Lehrbuch von Treiber/Kesting." />
-<meta name="keywords" content="Verkehr, Verkehrsdynamik, Verkehrssimulation, Lehrbuch, Treiber, Kesting" />
 
 <link href="css/haupt.css" type="text/css" media="screen" rel="stylesheet">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
@@ -19,13 +17,17 @@
 <div id="wrap">
 	
 	<div id="content">
-        <h4>Rezensionen</h4>
-        <p class="p1">&#8222;We are, in truth, more than half of what we are by imitation. The great point is, to choose models and to study them with care.&#8221;</p>
-        <p class="questioner">&#8212; Lord Chesterfield, 1750</p>       
+	
+        <p class="p1">[...] Mit dem Buch von Treiber und Kesting liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt. [...] Durch die inhaltliche Breite der Darstellung spricht das Buch unterschiedliche Zielgruppen an. Zum einen ist es durchaus auch für Experten interessant, beispielsweise aufgrund der ausführlichen Darstellung der diversen Modellklassen und ihrer Eigenschaften. Zum anderen kann es sehr gut als Grundlage oder Ergänzung für Vorlesungen (etwa über Mechanik oder statistische Physik) dienen. [...] </p>
+        <p class="questioner"><a href="http://www.pro-physik.de/details/rezension/1391665/Verkehrsdynamik_und_-simulation.html">Prof. Dr. Andreas Schadschneider, Ins­titut für Theoretische Physik und Ins­titut für Physik­didaktik, Universität zu Köln (09. November 2011)</p>       
 
-        <blockquote>&#8222;A fanatic is one who can't change his mind and won't change the subject.&#8221;
+ <p class="p1">Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. Die freie Entscheidung, ob man bremst oder nicht - gibt es nicht mehr. Das Auto wird zum berechenbaren Teilchen. [...] Die Verkehrsfluss-Forscher Martin Treiber und Arne Kesting haben im Herbst 2010 das erste deutschsprachige Lehrbuch zu diesem Thema vorgestellt. [...] </p>
+        <p class="questioner"><a href="res/rezension_automobilrevue_15Jan2011_Nr1.png">RAK, <a href="http://www.automobilrevue.ch/">Automobilrevue</a> (15. Januar 2011)</p>       
+
+        <!--<blockquote>
             <cite>&#8212; Winston Churchill, 1954</cite>
-        </blockquote>          
+        </blockquote>          -->
+        
 	</div>
 		
 

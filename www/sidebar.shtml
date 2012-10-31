@@ -1,8 +1,7 @@
 <div id="sidebar">
 
 <p>
-    <a class="image" href="http://www.springer.com/physics/complexity/book/978-3-642-05227-9"><img src="img/cover.png" width="75%" alt="Cover" /></a></p>
-
+<a class="image" href="http://www.springer.com/physics/complexity/book/978-3-642-05227-9"><img src="img/cover-small.png" width="75%" alt="Cover" /></a></p>
 
 <p>
     <a class="image" href="res/Verkehrsdynamik_Inhaltsverzeichnis.pdf"><img src="img/pdf1.gif" alt="Inhaltsverzeichnis" /></a>
@@ -38,7 +37,6 @@
 		<dt></dt>
 		<a href="http://www.mtreiber.de"><dd class="img"><img src="img/mtreiber.jpg" width="80" height="80" alt="<Link zur Homepage" /></dd></a>
 		<dd><a href="http://www.mtreiber.de"><b>Martin Treiber</b></a><br /><br />
-<!-- <a href="javascript:linkTo_UnCryptMailto('nbjmup;usfjcfsAwxj/uv.esftefo/ef');">treiber[at]vwi.tu-dresden.de</a> -->
         </dd>
 	</dl>
 
@@ -46,7 +44,6 @@
 		<dt></dt>
 		<a href="http://www.akesting.de"><dd class="img"><img src="img/akesting.jpg" width="80" height="80" alt="Foto"/></a>
         <dd><a href="http://www.akesting.de"><b>Arne Kesting</b></a><br/><br />
-<!-- <a href="javascript:linkTo_UnCryptMailto('nbjmup;nbjmAblftujoh/ef');">mail[at]akesting.de</a> -->
         </dd>
 		
         </dd>
@@ -59,11 +56,17 @@
         </dd>
 	</dl>
 
-	<dl>
+<dl>
+		<dt></dt>
+		<a href="http://www.movsim.org"><dd class="img"><img src="img/movsim-screenshot.png" width="110" height="86" alt="www.movsim.org"/></a>
+        <dd><a href="http://www.movsim.org"><b>www.movsim.org</b></a><br/><br />
+        </dd> 
+        
+<!--	<dl>
 		<dt></dt>
 		<a href="http://www.traffic-states.com"><dd class="img"><img src="img/A5S_Tue_2001_05_22.0465_0492.06_14.gasm_v2d.png" width="110" height="86" alt="www.traffic-states.com"/></a>
         <dd><a href="http://www.traffic-states.com"><b>www.traffic-states.com</b></a><br/><br />
-        </dd>
+        </dd> -->
 		
         </dd>
 	</dl>

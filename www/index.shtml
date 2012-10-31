@@ -2,9 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head profile="http://gmpg.org/xfn/11">
 <title>Verkehrsdynamik und -simulation &middot; Springer-Lehrbuch</title>
+
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta name="description" content="Verkehrsdynamik und Simulation: Lehrbuch von Treiber/Kesting." />
-<meta name="keywords" content="Verkehr, Verkehrsdynamik, Verkehrssimulation, Verkehrsflussdynamik, Stau, Stauentstehung, Lehrbuch, Treiber, Kesting" />
+<meta name="description" content="Verkehrsdynamik und Simulation: Daten, Modelle und Anwendungen der Verkehrsflussdynamik. Lehrbuch von Martin Treiber/Arne Kesting." />
+<meta name="keywords" content="Verkehr, Verkehrsdynamik, Verkehrsfluss, Verkehrssimulation, Simulation, Verkehrsflussdynamik, Stau, Stauentstehung, Lehrbuch, movsim.org, Martin Treiber, Arne Kesting, Springer, traffic dynamics, traffic flow, " />
+
 <link href="css/haupt.css" type="text/css" media="screen" rel="stylesheet"/>
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 
@@ -53,19 +55,35 @@
 
 
 <div id="wrap">
+<div id="content">
 
-	<div id="content">
-        <p class="p1">Das Lehrbuch gibt eine umfassende und didaktische Darstellung der Modellierung und Dynamik des Straßenverkehrs. Es erschließt Studenten dieses anschauliche und faszinierende Gebiet, welches bisher nur in der englischsprachigen Originalliteratur verfügbar war. Zahlreiche Abbildungen und gelöste Übungsaufgaben tragen zum Verständnis bei. 
-        </p>
+<p class="p1">Verkehrsdynamische Modelle haben in den letzten 20 Jahren an
+Bedeutung gewonnen und wesentlich zum grundsätzlichen
+Verständnis der Stauphänomene im Straßenverkehr beigetragen.</p>
 
-        <p >Das Buch richtet sich an Physik- und Verkehrsingenieurstudenten sowie allgemein an Studierende der Informatik, Mathematik und technischer Richtungen mit interdisziplinärer Ausrichtung.
-        </p>
+<p>Das Lehrbuch "Verkehrsdynamik und -simulation" bietet eine
+umfassende und didaktische Darstellung der verschiedenen Verkehrsmodelle. 
+Die vollständige und formale Darstellung der Modelle ermöglicht es dem Leser, dynamische
+Verkehrsflussmodelle zu verstehen und selbständig einsetzen zu können.
+Zahlreiche Abbildungen und gelöste Übungsaufgaben tragen zum Verständnis bei.</p>
 
-       <p><a href="ueberDasBuch.shtml">Mehr Infos über das Buch ... </a></p>
+<p>Es richtet sich an Studierende im Verkehrsbereich und
+in den Naturwissenschaften mit interdisziplinärer Ausrichtung. Es
+bietet aber auch Ingenieuren in der Berufswelt eine gute Übersicht
+über wesentliche Ansätze und neuere Simulationsmodelle.</p>
 
-      
-         
-		</div>
+<p><a href="ueberDasBuch.shtml">... mehr Infos über das Buch</a></p>
+
+<p class="p1">
+Über Feedback und Hinweise auf Fehler im Buch freuen wir uns. Eine Liste der <a href="res/ErrataVerkehrsdynamik.pdf">Errata</a> wird regelmäßig aktualisiert.</p>
+
+<p class="plink">
+<a href="javascript:linkTo_UnCryptMailto('nbjmup;usfjcfsAwxj/uv.esftefo/ef');">treiber@vwi.tu-dresden.de</a>
+<br />
+<a href="javascript:linkTo_UnCryptMailto('nbjmup;nbjmAblftujoh/ef');">mail@akesting.de</a>
+</p>
+</div>
+</div>
 		
 
 <!--#include file="sidebar.shtml" -->
