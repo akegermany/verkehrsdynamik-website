@@ -76,13 +76,16 @@ bietet aber auch Ingenieuren in der Berufswelt eine gute Übersicht
 <p><a href="ueberDasBuch.shtml">... mehr Infos über das Buch</a></p>
 
 <p class="p1">
-Über Feedback und Hinweise auf Fehler im Buch per Email freuen wir uns. Eine Liste der <a href="res/ErrataVerkehrsdynamik.pdf">Errata</a> wird regelmäßig aktualisiert.</p>
+Die "Steckbrief-Szenarien" für die verschiedenen mikroskopischen Modelle lassen sich im Applet interaktiv simulieren. Aus diesem Ansatz ist <a href="http://www.movsim.org">movsim.org</a> entstanden: Eine <a href="movsim.shtml">Open-Source Software für mikroskopische Verkehrssimulationen</a>. Dort finden sich Referenzimplementierungen zu den verschiedenen Longitudinal- und Spurwechselmodellen sowie des physikalische Verbrauchsmodells. Die Software bietet sich als Ausgangspunkt für eigene Modellierungs- bzw. Simulationsprojekte an.</p>
+<p class="p1">
+Über Feedback und Hinweise auf Fehler im Buch freuen wir uns. Eine Liste der <a href="res/ErrataVerkehrsdynamik.pdf">Errata</a> wird regelmäßig aktualisiert.</p>
 
+<p>Wir sind per Email erreichbar:</p>
 <p class="plink">
-<a href="javascript:linkTo_UnCryptMailto('nbjmup;usfjcfsAwxj/uv.esftefo/ef');">treiber@vwi.tu-dresden.de</a>
-<br />
+<a href="javascript:linkTo_UnCryptMailto('nbjmup;usfjcfsAwxj/uv.esftefo/ef');">treiber@vwi.tu-dresden.de</a> und
 <a href="javascript:linkTo_UnCryptMailto('nbjmup;nbjmAblftujoh/ef');">mail@akesting.de</a>
 </p>
+
 </div>
 
 		
