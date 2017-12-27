@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Verkehrsdynamik und -simulation &middot; Daten, Modelle und Anwendungen der Verkehrsflussdynamik &middot; Martin Treiber and Arne Kesting &middot; Springer Lehrbuch</title>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- ??? -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Martin Treiber, Arne Kesting">
+  <meta name="description" content="Verkehrsdynamik: Daten, Modelle und Anwendungen der Verkehrsflussdynamik. Martin Treiber and Arne Kesting. Springer Lehrbuch" />
+  <meta name="keywords" content=" Lehrbuch Modelle Verkehr Lehrbuch Verkehrsdynamik Lehrbuch Verkehrssimulation Optimierung Simulation Verkehrsinstabilität Stau Verkehrssimulation Verkehrstelematik Fahrerassistenzsystem makroskopische Modelle Verkehr mikroskopische Modelle Verkehr movsim.org, Martin Treiber, Arne Kesting, mtreiber.de, akesting.de Springer" />
+
+  <link rel="shortcut icon" href="img/favicon.ico">    
+  
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">  -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"> -->
+  <link href="./css/Montserrat.css" rel="stylesheet" type="text/css"> 
+  <link href="./css/Lato.css" rel="stylesheet" type="text/css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+s<!--    .container {     max-width: 576px;   } -->
+
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #dc7e00;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #dc7e00;
+      font-size: 50px;
+  }
+  .logo {
+      color: #dc7e00;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 75%;
+      height: 75%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #dc7e00;
+  }
+  .carousel-indicators li {
+      border-color: #dc7e00;
+  }
+  .carousel-indicators li.active {
+      background-color: #dc7e00;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #dc7e00; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #dc7e00;
+      background-color: #fff !important;
+      color: #dc7e00;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #dc7e00 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #dc7e00;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #401019;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 3px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #401019 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #dc7e00;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="verkehrsdynamikPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#trafficFlowDynamicsPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Buch</a></li>
+        <li><a href="#samples">Lese-Proben und Errata</a></li>
+        <li><a href="#reviews">Rezensionen</a></li>
+        <li><a href="#authors">Autoren</a></li>
+        <li><a href="#simulation">Simulation</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Verkehrsdynamik</h1> 
+  <h3>Daten, Modelle und Anwendungen der Verkehrsflussdynamik</h3> 
+  <p><i>Martin Treiber</i> und <i>Arne Kesting</i></p>
+  <br>  
+  <ul>
+	  <li>Das erste Lehrbuch zu diesem rasch wachsenden Gebiet</li>
+	  <li>Dynamische Verkehrsflussmodelle verstehen und einsetzen
+	  <li>Einflussfaktoren der Stauentstehung und Verkehrsinstabilitäten wie Stop-and-Go-Verkehr</li>
+	  <li>Praxisbezug zu Anwendungen in Bereichen wie Telematik, Fahrer-Assistenzsysteme und Verkehrsmanagement</li>
+  </ul>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+	  <div class="col-sm-4 text-center">
+        <span><img src="img/verkehrsdynamik-cover.png" alt="Verkehrsdynamik Buch" width="250"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Über das Buch</h2><br>
+
+      <h4>Das Lehrbuch "Verkehrsdynamik und -simulation" bietet eine umfassende und didaktische Darstellung der verschiedenen Verkehrsmodelle. Die vollständige und formale Darstellung der Modelle ermöglicht es dem Leser, dynamische Verkehrsflussmodelle zu verstehen und selbständig einsetzen zu können. Zahlreiche Abbildungen und gelöste Übungsaufgaben tragen zum Verständnis bei.</h4>
+      
+      <p>Es richtet sich an Studierende im Verkehrsbereich und in den Naturwissenschaften mit interdisziplinärer Ausrichtung. Es bietet aber auch Ingenieuren in der Berufswelt eine gute Übersicht über wesentliche Ansätze und neuere Simulationsmodelle.</p>
+      
+      <p>Das Buch "Verkehrsdynamik und -simulation" besteht aus drei Hauptteilen. Im ersten Teil werden verschiedene Kategorien von Verkehrsdaten für die Verkehrsflussmodellierung eingeführt. Den Schwerpunkt des Buches bildet der zweite Teil, der sich der Beschreibung der Verkehrsdynamik mit Hilfe mathematischer Modelle widmet. Es werden <i>makroskopische Modelle</i> und anschließend <i>mikroskopische Modelle</i> ausführlich betrachtet. Während bei den Mikromodellen die einzelnen Fahrzeuge betrachtet werden, beschreiben Makromodelle den Systemzustand des Verkehrs durch wenige Variablen (Verkehrsfluss, Verkehrsdichte und mittlere Geschwindigkeit). Neben einer Darstellung konkreter Modelle werden für beide Modellklassen allgemeine Plausibilitäts- und Qualitätskriterien ausgearbeitet, die in dieser kompakten Form in der Originalliteratur nicht zu finden sind. Für eine mikroskopische Beschreibung des Verkehrs werden anschließend Modelle für diskrete Entscheidungen wie z.B. Spurwechseln oder Einfahrt in eine vorfahrtsberechtigte Straße vorgestellt. Schließlich werden die verschiedenen Arten von Verkehrsinstabilitäten analysiert.</p>
+      
+      <p>Im dritten Teil des Buches werden ausgewählte Anwendungen der dargestellten Konzepte und Modelle thematisiert. Es werden die Entstehung und Ausbreitung von Staus, die Grundlagen der Verkehrslageschätzung, die Berechnung von Reisezeiten, ein Modell zur detaillierten Kraftstoffverbrauchs- und Emissionsberechnung sowie Anwendungen der Verkehrstelematik behandelt.</p>
+      
+      <p>ISBN 978-3-642-32459-8 &middot; 2010, 368 Seiten, 176 Abbildungen, 56 in Farbe.</p>
+      
+      <p><a class="btn btn-link" href="http://www.springer.com/de/book/9783642052279" role="button">Springer</a>
+      <a class="btn btn-link" href="https://doi.org/10.1007/978-3-642-05228-6" role="button">Look Inside</a>
+      <!-- <a class="btn btn-link" href="https://link.springer.com/book/10.1007%2F978-3-642-05228-6" role="button">Look Inside</a> -->
+      <a class="btn btn-link" href="res/ProductFlyer-9783642052279.pdf" role="button">Flyer (PDF)</a>
+      <a class="btn btn-link" href="http://www.bookmetrix.com/detail/book/f62caa1d-a118-4eff-b4ca-1cc4d94f40fc" role="button">Bookmetrics</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="samples" class="container-fluid bg-grey">
+  <div class="row">
+	  <div class="col-sm-4 text-center">
+      <span class="glyphicon glyphicon-download logo"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Lese-Proben und Errata</h2><br>
+      <h4><strong></strong>Probe-Kapitel:</strong> Das <a href="./res/TrafficFlowDynamics-TableOfContents.pdf">Inhaltsverzeichnis</a> und zwei Kapitel stehen zum kostenlosen Download im PDF Format zur Verfügung. Das Kapitel 11 stellt <a href="./res/SampleChapter11.pdf"><i>Aus Fahrstrategien hergeleitete Fahrzeugfolgemodelle</i></a> dar und eignet sich gut als Einführung in mikroskopische Fahrzeugfolgemodelle, insbesondere des <a href="https://en.wikipedia.org/wiki/Intelligent_driver_model">Intelligent Driver Model (IDM)</a>.</h4>
+       <a class="btn btn-link" href="./res/Verkehrsdynamik_Inhaltsverzeichnis.pdf" role="button">Inhaltsverzeichnis (PDF)</a>
+       <a class="btn btn-link" href="./res/Probekapitel_Trajektoriendaten.pdf" role="button">Kapitel 2 (PDF)</a>
+       <a class="btn btn-link" href="./res/Probekapitel_Mikromodelle.pdf" role="button">Kapitel 11 (PDF)</a>
+	   
+      <h4><strong>Errata:</strong> Wir führen hier eine aktuelle Liste von Druckfehlern &ndash; und freuen uns über Hinweise auf weitere, siehe <a href="#contact">Kontakt</a>.</h4>
+      <a class="btn btn-link" href="res/ErrataVerkehrsdynamik.pdf" role="button">Errata (PDF)</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="reviews" class="container-fluid text-center">
+      <h2>Rezensionen</h2>
+      
+      <p><a class="btn btn-link" href="http://www.pro-physik.de/details/rezension/1391665/Verkehrsdynamik_und_-simulation.html" role="button">Physik Journal (Nov. 2011)</a>
+      <a class="btn btn-link" href="res/rezension_automobilrevue_15Jan2011_Nr1.png" role="button">Automobilrevue (Jan 2011)</a>
+      <a class="btn btn-link" href="http://www.amazon.de/Verkehrsdynamik-simulation-Anwendungen-Verkehrsflussdynamik-Springer-Lehrbuch/dp/3642052274/ref=sr_1_4?ie=UTF8&s=books&qid=1273235393&sr=1-4" role="button">Rezensionen auf Amazon.de</a></p>
+  </div>
+  
+  <!-- deactivated: slide -->
+  <div id="reviewCarousel" class="carousel  text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#reviewCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#reviewCarousel" data-slide-to="1"></li>
+      <li data-target="#reviewCarousel" data-slide-to="2"></li>
+      <li data-target="#reviewCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Mit dem Buch [..] liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt."</h4>
+        <br><span>Andreas Schadschneider, Universität zu Köln</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. [..] Das Auto wird zum berechenbaren Teilchen."
+        <br><span>Rainer Klose, Automobilrevue</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Durch die inhaltliche Breite der Darstellung spricht das Buch unterschiedliche Zielgruppen an. Zum einen ist es durchaus auch für Experten interessant, beispielsweise aufgrund der ausführlichen Darstellung der diversen Modellklassen und ihrer Eigenschaften. Zum anderen kann es sehr gut als Grundlage oder Ergänzung für Vorlesungen (etwa über Mechanik oder statistische Physik) dienen."
+        <br><span>Andreas Schadschneider, Universität zu Köln</span></h4>
+      </div>
+      
+      <div class="item">
+        <h4>"Bietet Ingenieuren in der Berufswelt eine gute Übersicht über wesentliche Ansätze und neuere Simulationsmodelle. Im Haupttext dienen kleinere Aufgaben und Fragen zur Anregung und Kontrolle des eigenen Verständnisses."
+        <br><span>Straßenverkehrstechnik, Februar 2011</span></h4>
+      </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#reviewCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#reviewCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+</div>
+
+<!-- Container -->
+<div id="authors" class="container-fluid text-center bg-grey">
+  <h2>Autoren</h2><br>
+  <div class="row">
+    <div class="col-sm-8 text-right">
+        <p><strong><a href="http://www.mtreiber.de">Martin Treiber</a></strong>. Ingenieurstudium in Nürnberg, Physikstudium und Promotion an der Universität Bayreuth. Dozent an der <a href="https://tu-dresden.de/bu/verkehr/ivw/osv">TU Dresden</a>. Mehr als 70 begutachtete Zeitschriftenartikel. Forschungsschwerpunkte: Verkehrsmodellierung und -simulation, Datenanalyse, Verkehrslageschätzung, Simulation zukünftiger Fahrerassistenzsysteme. Autor der Website <a href="http://traffic-simulation.de/">www.traffic-simulation.de</a> </p>
+        
+        <p>
+		<a class="btn btn-link" href="http://mtreiber.de" role="button">Martins Homepage</a>
+        <a class="btn btn-link" href="https://scholar.google.de/citations?user=WCLdpbMAAAAJ" role="button">Google Scholar Profil</a>
+        <a class="btn btn-link" href="https://www.researchgate.net/profile/Martin_Treiber2" role="button">Research Gate</a>
+        </p>
+        
+    </div>
+    <div class="col-sm-4 text-center" >
+        <span><img src="img/mtreiber.jpg" alt="Martin" width="220"></span>
+    </div>
+    </div>
+    <div class="col-sm-12"><br><br></div>
+    
+    <div class="row">
+    <div class="col-sm-4 text-center">
+        <span><img src="img/akesting.jpg" alt="Arne" width="220"></span>
+    </div>
+    <div class="col-sm-8 text-left" >
+        <p><strong><a href="http://www.akesting.de">Arne Kesting</a></strong>. Physikstudium an der <a href="http://www.fu-berlin.de/en/einrichtungen/fachbereiche/fb/physik">FU Berlin</a>. Promotion an der TU Dresden. Die Doktorarbeit <a href="http://www.akesting.de/thesis.html"><i>Microscopic Modeling of Human and Automated Driving: Towards Traffic-Adaptive Cruise Control</i></a> wurde mit dem Friedrich-List-Preis und dem <a href="http://sites.ieee.org/itss/itss-awards/ieee-itss-best-dissertation-award/">IEEE ITS Best Dissertation Award</a> ausgezeichnet. Heute Expert Software Engineer bei <a href="https://www.tomtom.com/careers/city/GER_BERLIN">TomTom in Berlin</a>.</p>
+        <p>
+        <a class="btn btn-link" href="http://akesting.de" role="button">Arnes Homepage</a>
+        <a class="btn btn-link" href="https://scholar.google.de/citations?user=ULJzdg4AAAAJ" role="button">Google Scholar Profil</a>
+        <a class="btn btn-link" href=" https://www.linkedin.com/in/arne-kesting-b9731b14a/" role="button">LinkedIn</a>
+        </p>
+      </div>
+      </div>
+  </div>
+</div>
+
+<!-- Container -->
+<div id="simulation" class="container-fluid text-center ">
+  <h2>Verkehrssimulation und -daten</h2><br>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/clover.png" alt="movsim.org" width="250">
+        <p><strong><a href="https://movsim.org">movsim.org</a></strong></p>
+        <p>Der Open-Source Simulator ist in Java geschrieben und implementiert verschiedene Fahrzeugfolge-Modelle. MovSim bietet Referenz-Implementierungen der im Buch beschriebenen Modelle sowie der Simulations-Szenarien. Der Quellcode ist verfügbar auf <a href="https://github.com/movsim/movsim">Github</a>.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/traffic-simulation-de-small.png" alt="www.traffic-simuation.de" width="250">
+        <p><strong><a href="http://www.traffic-simulation.de">traffic-simulation.de</a></strong></p>
+        <p>Der <a href="https://github.com/movsim/traffic-simulation-de">Open-Source Simulator</a> ist in JavaScript geschrieben und demonstriert die Prinzipien der Verkehrsfluss-Dynamik anhand verschiedener Szenarien und interaktiver Modell- und Simulationsparameter. Mehr Informationen gibt es in einem <a href="https://www.youtube.com/watch?v=azmcu1cn2vgku">YouTube Video</a> und einer <a href="https://github.com/movsim/traffic-simulation-de/blob/master/doc/TrafficSimulationDe.pdf">Dokumentation (PDF)</a> &ndash; oder <a href="http://www.traffic-simulation.de">einfach ausprobieren</a>.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/trafficstates-deu.png" alt="traffic-states website" width="250">
+        <!-- TODO link to new http://traffic-flow-dynamics.org/traffic-states/ once availables-->
+        <p><strong><a href="http://www.h2063376.stratoserver.net/trafficstates/?site=start&lang=en">Empirische Stauphänomene</a></strong></p>
+        <p>Die Webseite stellt die vielfältige Dynamik des Verkehrsflusses in Raum und Zeit anhand empirischer Verkehrsdaten dar. Sie verfügt über eine durchsuchbare Bilder-Datenbank  von Staus und erklärt die charakteristischen  Eigenschaften von Staus sowie deren Einflussfaktoren.</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<!-- Container -->
+<div id="contact" class="container-fluid text-center">
+  <h2 class="text-center">Kontakt</h2>
+  <div class="row">
+    <div class="col-sm-12">
+
+<p><span class="glyphicon glyphicon-envelope"></span>
+<script language="JavaScript">
+var username = "martin.treiber";
+var hostname = "tu-dresden.de";
+var linktext = username + "@" + hostname ;
+document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+</script> &middot;  <span class="glyphicon glyphicon-home"></span><a href="http://mtreiber.de"> www.mtreiber.de</a>
+</p>
+
+<p><span class="glyphicon glyphicon-envelope"></span>
+<script language="JavaScript">
+var username = "book";
+var hostname = "akesting.de";
+var linktext = username + "@" + hostname ;
+document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+</script> &middot; <span class="glyphicon glyphicon-home"></span><a href="https://akesting.de"> www.akesting.de</a>
+</p>
+
+<p>Englisches Buch: <a href="http://traffic-flow-dynamics.org">Traffic Flow Dynamics &ndash; Data, Models and Simulation</a></p>
+     </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#verkehrsdynamikPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>&copy; 2011-2017 M. Treiber, A. Kesting &middot; <a href="./imprint.html">Impressum</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#trafficFlowDynamicsPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
