@@ -10,6 +10,18 @@ body {
     position: relative;
 }
 
+a,
+.btn-link {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+.btn-link:hover,
+.btn-link:focus {
+    text-decoration: none;
+}
+
 h2 {
     font-size: 24px;
     text-transform: uppercase;
