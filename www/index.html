@@ -85,38 +85,26 @@
       height: 75%;
       margin-bottom: 10px;
   }
-  .carousel-control-prev, .carousel-control-next {
-      background-image: none;
-      color: #dc7e00;
+  .review-quotes {
+      max-width: 980px;
+      margin: 45px auto 0;
   }
-  .carousel-control-icon {
-      color: #dc7e00;
-      font-size: 32px;
+  .review-quote {
+      margin: 0 auto 34px;
+      max-width: 680px;
   }
-  .carousel-indicators [data-bs-target] {
-      border-color: #dc7e00;
-      border-radius: 10px;
-      border-style: solid;
-      border-width: 1px;
-      width: 10px;
-      height: 10px;
-      opacity: 1;
-      background-color: transparent;
-  }
-  .carousel-indicators .active {
-      background-color: #dc7e00;
-  }
-  .carousel-item h4 {
+  .review-quote p {
       font-size: 19px;
       line-height: 1.375em;
+      color: #303030;
       font-weight: 400;
       font-style: italic;
-      max-width: 680px;
-      margin: 70px auto;
-      padding: 0 20px;
+      margin-bottom: 12px;
   }
-  .carousel-item span {
+  .review-quote cite {
+      display: block;
       font-style: normal;
+      color: #818181;
   }
   .navbar {
       margin-bottom: 0;
@@ -251,57 +239,26 @@
       <p><a class="btn btn-link" href="http://www.pro-physik.de/details/rezension/1391665/Verkehrsdynamik_und_-simulation.html" role="button">Physik Journal (Nov. 2011)</a>
       <a class="btn btn-link" href="res/rezension_automobilrevue_15Jan2011_Nr1.png" role="button">Automobilrevue (Jan 2011)</a>
       <a class="btn btn-link" href="https://www.amazon.de/Verkehrsdynamik-simulation-Anwendungen-Verkehrsflussdynamik-Springer-Lehrbuch/dp/3642052274/ref=sr_1_4?ie=UTF8&s=books&qid=1273235393&sr=1-4" role="button">Rezensionen auf Amazon.de</a></p>
-  </div>
-  
-  <!-- deactivated: slide -->
-  <div id="reviewCarousel" class="carousel slide text-center" data-bs-ride="carousel">
-    <!-- Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Rezension 1"></button>
-      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Rezension 2"></button>
-      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Rezension 3"></button>
-      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="3" aria-label="Rezension 4"></button>
-    </div>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <h4>"Mit dem Buch [..] liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt."
-        <br><span>Andreas Schadschneider, Universität zu Köln</span></h4>
-      </div>
-      <div class="carousel-item">
-        <h4>"Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. [..] Das Auto wird zum berechenbaren Teilchen."
-        <br><span>Rainer Klose, Automobilrevue</span></h4>
-      </div>
-      <div class="carousel-item">
-        <h4>"[Das Buch] ... ist durchaus auch für Experten interessant, beispielsweise aufgrund der ausführlichen Darstellung der diversen Modellklassen [..]. Zum anderen kann es sehr gut [..] für Vorlesungen (etwa über Mechanik oder statistische Physik) dienen."
-        <br><span>Andreas Schadschneider, Universität zu Köln</span></h4>
-      </div>
+      <div class="review-quotes">
+        <blockquote class="review-quote">
+          <p>"Mit dem Buch [..] liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt."</p>
+          <cite>Andreas Schadschneider, Universität zu Köln</cite>
+        </blockquote>
+        <blockquote class="review-quote">
+          <p>"Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. [..] Das Auto wird zum berechenbaren Teilchen."</p>
+          <cite>Rainer Klose, Automobilrevue</cite>
+        </blockquote>
+        <blockquote class="review-quote">
+          <p>"[Das Buch] ... ist durchaus auch für Experten interessant, beispielsweise aufgrund der ausführlichen Darstellung der diversen Modellklassen [..]. Zum anderen kann es sehr gut [..] für Vorlesungen (etwa über Mechanik oder statistische Physik) dienen."</p>
+          <cite>Andreas Schadschneider, Universität zu Köln</cite>
+        </blockquote>
       
-      <div class="carousel-item">
-        <h4>"Bietet Ingenieuren in der Berufswelt eine gute Übersicht über wesentliche Ansätze und neuere Simulationsmodelle."
-        <br><span>Straßenverkehrstechnik, Februar 2011</span></h4>
+        <blockquote class="review-quote">
+          <p>"Bietet Ingenieuren in der Berufswelt eine gute Übersicht über wesentliche Ansätze und neuere Simulationsmodelle."</p>
+          <cite>Straßenverkehrstechnik, Februar 2011</cite>
+        </blockquote>
       </div>
-    </div>
-    
-    <!-- Left and right controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-      <span class="carousel-control-icon" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 16 16">
-          <path d="M10.53 3.53a.75.75 0 0 0-1.06-1.06l-5 5a.75.75 0 0 0 0 1.06l5 5a.75.75 0 0 0 1.06-1.06L6.06 8l4.47-4.47Z"></path>
-        </svg>
-      </span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-      <span class="carousel-control-icon" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 16 16">
-          <path d="M5.47 3.53a.75.75 0 0 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06-1.06L9.94 8 5.47 3.53Z"></path>
-        </svg>
-      </span>
-      <span class="visually-hidden">Next</span>
-    </button>
-</div>
+  </div>
 
 <!-- Container -->
 <div id="authors" class="container-fluid text-center bg-grey">
