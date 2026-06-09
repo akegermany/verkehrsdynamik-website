@@ -141,6 +141,46 @@ footer .footer-icon {
 }
 
 @media screen and (max-width: 768px) {
+    html {
+        scroll-padding-top: 64px;
+    }
+
+    .jumbotron {
+        padding: 74px 24px 54px;
+    }
+
+    .jumbotron h1 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    .jumbotron h3 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 14px;
+    }
+
+    .jumbotron p {
+        margin-bottom: 0;
+    }
+
+    .jumbotron br {
+        display: none;
+    }
+
+    .jumbotron ul {
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding-left: 18px;
+        max-width: 460px;
+    }
+
+    .jumbotron li {
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
@@ -148,6 +188,27 @@ footer .footer-icon {
 }
 
 @media screen and (max-width: 480px) {
+    .jumbotron {
+        padding: 66px 20px 46px;
+    }
+
+    .jumbotron h1 {
+        font-size: 29px;
+    }
+
+    .jumbotron h3 {
+        font-size: 23px;
+    }
+
+    .jumbotron ul {
+        margin-top: 28px;
+        max-width: 340px;
+    }
+
+    .jumbotron li {
+        margin-bottom: 7px;
+    }
+
     .logo {
         font-size: 150px;
     }
