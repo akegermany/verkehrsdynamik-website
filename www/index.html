@@ -15,16 +15,19 @@
   <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
   <link href="./css/Montserrat.css" rel="stylesheet" type="text/css"> 
   <link href="./css/Lato.css" rel="stylesheet" type="text/css">
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
   
  <!--    .container {     max-width: 576px;   } -->
 
   <style>
+  html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+  }
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+      position: relative;
   }
   h2 {
       font-size: 24px;
@@ -46,19 +49,31 @@
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
+  .jumbotron ul {
+      display: inline-block;
+      margin-top: 30px;
+      padding-left: 20px;
+      text-align: left;
+  }
   .container-fluid {
       padding: 60px 50px;
   }
   .bg-grey {
       background-color: #f6f6f6;
   }
-  .logo-small {
-      color: #dc7e00;
-      font-size: 50px;
-  }
   .logo {
       color: #dc7e00;
       font-size: 200px;
+  }
+  .icon {
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+      vertical-align: -0.125em;
+  }
+  .contact-icon {
+      color: #dc7e00;
+      margin-right: 6px;
   }
   .thumbnail {
       padding: 0 0 15px 0;
@@ -70,63 +85,36 @@
       height: 75%;
       margin-bottom: 10px;
   }
-  .carousel-control.right, .carousel-control.left {
+  .carousel-control-prev, .carousel-control-next {
       background-image: none;
       color: #dc7e00;
   }
-  .carousel-indicators li {
-      border-color: #dc7e00;
+  .carousel-control-icon {
+      color: #dc7e00;
+      font-size: 32px;
   }
-  .carousel-indicators li.active {
+  .carousel-indicators [data-bs-target] {
+      border-color: #dc7e00;
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 1px;
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+      background-color: transparent;
+  }
+  .carousel-indicators .active {
       background-color: #dc7e00;
   }
-  .item h4 {
+  .carousel-item h4 {
       font-size: 19px;
       line-height: 1.375em;
       font-weight: 400;
       font-style: italic;
       margin: 70px 0;
   }
-  .item span {
+  .carousel-item span {
       font-style: normal;
-  }
-  .panel {
-      border: 1px solid #dc7e00; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #dc7e00;
-      background-color: #fff !important;
-      color: #dc7e00;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #dc7e00 !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #dc7e00;
-      color: #fff;
   }
   .navbar {
       margin-bottom: 0;
@@ -139,58 +127,29 @@
       border-radius: 0;
       font-family: Montserrat, sans-serif;
   }
-  .navbar li a, .navbar .navbar-brand {
+  .navbar .navbar-brand, .navbar .nav-link {
       color: #fff !important;
   }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
+  .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
       color: #401019 !important;
       background-color: #fff !important;
   }
-  .navbar-default .navbar-toggle {
+  .navbar .navbar-toggler {
       border-color: transparent;
       color: #fff !important;
   }
-  footer .glyphicon {
+  .navbar .navbar-toggler:focus {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+  }
+  footer .footer-icon {
       font-size: 20px;
       margin-bottom: 20px;
       color: #dc7e00;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
   }
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
       margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
     }
   }
   @media screen and (max-width: 480px) {
@@ -200,26 +159,22 @@
   }
   </style>
 </head>
-<body id="verkehrsdynamikPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="verkehrsdynamikPage" data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-root-margin="0px 0px -75%" tabindex="0">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#trafficFlowDynamicsPage">Home</a>
-    </div>
+    <a class="navbar-brand nav-link" href="#trafficFlowDynamicsPage">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Navigation umschalten">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">Buch</a></li>
-        <li><a href="#samples">Leseproben und Errata</a></li>
-        <li><a href="#reviews">Rezensionen</a></li>
-        <li><a href="#authors">Autoren</a></li>
-        <li><a href="#simulation">Simulation</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">Buch</a></li>
+        <li class="nav-item"><a class="nav-link" href="#samples">Leseproben und Errata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Rezensionen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#authors">Autoren</a></li>
+        <li class="nav-item"><a class="nav-link" href="#simulation">Simulation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
       </ul>
     </div>
   </div>
@@ -270,7 +225,10 @@
 <div id="samples" class="container-fluid bg-grey">
   <div class="row">
 	  <div class="col-sm-4 text-center">
-      <span class="glyphicon glyphicon-download logo"></span>
+      <svg class="icon logo" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 12a.75.75 0 0 1-.53-.22l-3.5-3.5a.75.75 0 0 1 1.06-1.06L7.25 9.69V1.75a.75.75 0 0 1 1.5 0v7.94l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.5 3.5A.75.75 0 0 1 8 12Z"></path>
+        <path d="M2.75 14a.75.75 0 0 1 0-1.5h10.5a.75.75 0 0 1 0 1.5H2.75Z"></path>
+      </svg>
     </div>
     <div class="col-sm-8">
       <h2>Leseproben und Errata</h2><br>
@@ -295,52 +253,60 @@
   </div>
   
   <!-- deactivated: slide -->
-  <div id="reviewCarousel" class="carousel  text-center" data-ride="carousel">
+  <div id="reviewCarousel" class="carousel slide text-center" data-bs-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#reviewCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#reviewCarousel" data-slide-to="1"></li>
-      <li data-target="#reviewCarousel" data-slide-to="2"></li>
-      <li data-target="#reviewCarousel" data-slide-to="3"></li>
-    </ol>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Rezension 1"></button>
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Rezension 2"></button>
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Rezension 3"></button>
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="3" aria-label="Rezension 4"></button>
+    </div>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
         <h4>"Mit dem Buch [..] liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt."
         <br><span>Andreas Schadschneider, Universität zu Köln</span></h4>
       </div>
-      <div class="item">
+      <div class="carousel-item">
         <h4>"Autofahren ist eine Massenveranstaltung. Zwar sitzt hinter jedem Steuer ein Individualist, doch im dichten Verkehr werden alle gleich. [..] Das Auto wird zum berechenbaren Teilchen."
         <br><span>Rainer Klose, Automobilrevue</span></h4>
       </div>
-      <div class="item">
+      <div class="carousel-item">
         <h4>"[Das Buch] ... ist durchaus auch für Experten interessant, beispielsweise aufgrund der ausführlichen Darstellung der diversen Modellklassen [..]. Zum anderen kann es sehr gut [..] für Vorlesungen (etwa über Mechanik oder statistische Physik) dienen."
         <br><span>Andreas Schadschneider, Universität zu Köln</span></h4>
       </div>
       
-      <div class="item">
+      <div class="carousel-item">
         <h4>"Bietet Ingenieuren in der Berufswelt eine gute Übersicht über wesentliche Ansätze und neuere Simulationsmodelle."
         <br><span>Straßenverkehrstechnik, Februar 2011</span></h4>
       </div>
     </div>
     
     <!-- Left and right controls -->
-    <a class="left carousel-control" href="#reviewCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#reviewCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+      <span class="carousel-control-icon" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 16 16">
+          <path d="M10.53 3.53a.75.75 0 0 0-1.06-1.06l-5 5a.75.75 0 0 0 0 1.06l5 5a.75.75 0 0 0 1.06-1.06L6.06 8l4.47-4.47Z"></path>
+        </svg>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+      <span class="carousel-control-icon" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 16 16">
+          <path d="M5.47 3.53a.75.75 0 0 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06-1.06L9.94 8 5.47 3.53Z"></path>
+        </svg>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
 <!-- Container -->
 <div id="authors" class="container-fluid text-center bg-grey">
   <h2>Autoren</h2><br>
   <div class="row">
-    <div class="col-sm-8 text-right">
+    <div class="col-sm-8 text-end">
         <p><strong><a href="http://www.mtreiber.de">Martin Treiber</a></strong>. Ingenieurstudium in Nürnberg, Physikstudium und Promotion an der Universität Bayreuth. Dozent an der <a href="https://tu-dresden.de/bu/verkehr/ivw/osv">TU Dresden</a>. Mehr als 70 begutachtete Zeitschriftenartikel. Forschungsschwerpunkte: Verkehrsmodellierung und -simulation, Datenanalyse, Verkehrslageschätzung, Simulation zukünftiger Fahrerassistenzsysteme. Autor der Website <a href="http://traffic-simulation.de/">www.traffic-simulation.de</a> </p>
         <p>
 		<a class="btn btn-link" href="http://mtreiber.de" role="button">Martins Homepage</a>
@@ -359,7 +325,7 @@
     <div class="col-sm-4 text-center">
         <span><img src="img/akesting.jpg" alt="Arne" width="220"></span>
     </div>
-    <div class="col-sm-8 text-left" >
+    <div class="col-sm-8 text-start" >
         <p><strong><a href="http://www.akesting.de">Arne Kesting</a></strong>. Physikstudium an der <a href="http://www.fu-berlin.de/en/einrichtungen/fachbereiche/fb/physik">FU Berlin</a>. Promotion an der TU Dresden. Die Doktorarbeit <a href="http://www.akesting.de/thesis.html"><i>Microscopic Modeling of Human and Automated Driving: Towards Traffic-Adaptive Cruise Control</i></a> wurde mit dem Friedrich-List-Preis und dem <a href="https://www.ieee-itss.org/awards-best-dissertation">IEEE ITS Best Dissertation Award</a> ausgezeichnet. Heute Expert Software Engineer bei <a href="https://www.tomtom.com/careers/city/GER_BERLIN/">TomTom in Berlin</a>.</p>
         <p>
         <a class="btn btn-link" href="http://akesting.de" role="button">Arnes Homepage</a>
@@ -404,22 +370,30 @@
   <div class="row">
     <div class="col-sm-12">
 
-<p><span class="glyphicon glyphicon-envelope"></span>
+<p><svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+  <path d="M2 3h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm0 1.5a.5.5 0 0 0-.5.5v.4l6.2 3.72a.6.6 0 0 0 .6 0l6.2-3.72V5a.5.5 0 0 0-.5-.5H2Zm12.5 2.64-5.93 3.56a2.1 2.1 0 0 1-2.14 0L1.5 7.14V11a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5V7.14Z"></path>
+</svg>
 <script>
 var username = "martin.treiber";
 var hostname = "tu-dresden.de";
 var linktext = username + "@" + hostname ;
 document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-</script> &middot;  <span class="glyphicon glyphicon-home"></span><a href="http://mtreiber.de"> www.mtreiber.de</a>
+</script> &middot; <svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+  <path d="M8.53 1.22a.75.75 0 0 0-1.06 0l-6.25 6.25a.75.75 0 1 0 1.06 1.06L3 7.81V14a1 1 0 0 0 1 1h3.25v-4h1.5v4H12a1 1 0 0 0 1-1V7.81l.72.72a.75.75 0 1 0 1.06-1.06L8.53 1.22Z"></path>
+</svg><a href="http://mtreiber.de"> www.mtreiber.de</a>
 </p>
 
-<p><span class="glyphicon glyphicon-envelope"></span>
+<p><svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+  <path d="M2 3h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm0 1.5a.5.5 0 0 0-.5.5v.4l6.2 3.72a.6.6 0 0 0 .6 0l6.2-3.72V5a.5.5 0 0 0-.5-.5H2Zm12.5 2.64-5.93 3.56a2.1 2.1 0 0 1-2.14 0L1.5 7.14V11a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5V7.14Z"></path>
+</svg>
 <script>
 var username = "book";
 var hostname = "akesting.de";
 var linktext = username + "@" + hostname ;
 document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-</script> &middot; <span class="glyphicon glyphicon-home"></span><a href="https://akesting.de"> www.akesting.de</a>
+</script> &middot; <svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+  <path d="M8.53 1.22a.75.75 0 0 0-1.06 0l-6.25 6.25a.75.75 0 1 0 1.06 1.06L3 7.81V14a1 1 0 0 0 1 1h3.25v-4h1.5v4H12a1 1 0 0 0 1-1V7.81l.72.72a.75.75 0 1 0 1.06-1.06L8.53 1.22Z"></path>
+</svg><a href="https://akesting.de"> www.akesting.de</a>
 </p>
 
 <p>Englisches Buch: <a href="http://traffic-flow-dynamics.org">Traffic Flow Dynamics &ndash; Data, Models and Simulation</a></p>
@@ -429,43 +403,26 @@ document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" +
 
 <footer class="container-fluid text-center">
   <a href="#verkehrsdynamikPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
+    <svg class="icon footer-icon" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M7.47 4.47a.75.75 0 0 1 1.06 0l5 5a.75.75 0 1 1-1.06 1.06L8 6.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06l5-5Z"></path>
+    </svg>
   </a>
   <p>&copy; 2011-2017 M. Treiber, A. Kesting &middot; <a href="./imprint.html">Impressum</a></p>
 </footer>
 
+<script src="./js/bootstrap.bundle.min.js"></script>
 <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#trafficFlowDynamicsPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // Store hash
-      var hash = this.hash;
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+document.addEventListener('DOMContentLoaded', function () {
+  var navbarCollapse = document.getElementById('myNavbar');
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
+  document.querySelectorAll('#myNavbar .nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (navbarCollapse.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+      }
     });
   });
-})
+});
 </script>
 
 </body>
