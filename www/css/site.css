@@ -22,6 +22,14 @@ a:focus,
     text-decoration: none;
 }
 
+a:focus-visible,
+.btn-link:focus-visible,
+.navbar .nav-link:focus-visible {
+    border-radius: 2px;
+    outline: 3px solid #dc7e00;
+    outline-offset: 3px;
+}
+
 h2 {
     font-size: 24px;
     text-transform: uppercase;
@@ -85,7 +93,8 @@ h4 {
 
 .thumbnail img {
     width: 75%;
-    height: 75%;
+    max-width: 250px;
+    height: auto;
     margin-bottom: 10px;
 }
 
