@@ -76,6 +76,7 @@
   <link href="./css/site.css" rel="stylesheet" type="text/css">
 </head>
 <body id="verkehrsdynamikPage" data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-root-margin="0px 0px -75%" tabindex="0">
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
 <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Hauptnavigation">
   <div class="container">
@@ -96,6 +97,7 @@
   </div>
 </nav>
 
+<main id="main-content" tabindex="-1">
 <div id="trafficFlowDynamicsPage" class="jumbotron text-center">
   <h1>Verkehrsdynamik</h1> 
   <h3>Daten, Modelle und Anwendungen der Verkehrsflussdynamik</h3> 
@@ -163,7 +165,7 @@
       
       <p><a class="btn btn-link" href="http://www.pro-physik.de/details/rezension/1391665/Verkehrsdynamik_und_-simulation.html">Physik Journal (Nov. 2011)</a>
       <a class="btn btn-link" href="res/rezension_automobilrevue_15Jan2011_Nr1.png">Automobilrevue (Jan 2011)</a>
-      <a class="btn btn-link" href="https://www.amazon.de/Verkehrsdynamik-simulation-Anwendungen-Verkehrsflussdynamik-Springer-Lehrbuch/dp/3642052274/ref=sr_1_4?ie=UTF8&s=books&qid=1273235393&sr=1-4">Rezensionen auf Amazon.de</a></p>
+      <a class="btn btn-link" href="https://www.amazon.de/Verkehrsdynamik-simulation-Anwendungen-Verkehrsflussdynamik-Springer-Lehrbuch/dp/3642052274/ref=sr_1_4?ie=UTF8&amp;s=books&amp;qid=1273235393&amp;sr=1-4">Rezensionen auf Amazon.de</a></p>
       <div class="review-quotes">
         <blockquote class="review-quote">
           <p>"Mit dem Buch [..] liegt nun endlich eine umfassende einführende Darstellung in deutscher Sprache vor, die den Fortschritten der letzten 15 Jahre Rechnung trägt."</p>
@@ -199,7 +201,7 @@
         
     </div>
     <div class="col-sm-4 text-center" >
-        <span><img src="img/mtreiber.jpg" alt="Martin" width="220" height="220" loading="lazy" decoding="async"></span>
+        <span><img src="img/mtreiber.jpg" alt="Martin width="220" height="220" loading="lazy" decoding="async"></span>
     </div>
     </div>
     <div class="col-sm-12"><br><br></div>
@@ -240,7 +242,7 @@
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/trafficstates-deu.png" alt="Screenshot der Website Empirische Stauphänomene" width="250" height="243" loading="lazy" decoding="async">
-        <p><strong><a href="https://www.akesting.de/trafficstates/?site=start&lang=de">Empirische Stauphänomene</a></strong></p>
+        <p><strong><a href="https://www.akesting.de/trafficstates/?site=start&amp;lang=de">Empirische Stauphänomene</a></strong></p>
         <p>Die Webseite stellt die vielfältige Dynamik des Verkehrsflusses in Raum und Zeit anhand empirischer Verkehrsdaten dar. Sie verfügt über eine durchsuchbare Bilder-Datenbank  von Staus und erklärt die charakteristischen  Eigenschaften von Staus sowie deren Einflussfaktoren.</p>
       </div>
     </div>
@@ -256,12 +258,7 @@
 <p><svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
   <path d="M2 3h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm0 1.5a.5.5 0 0 0-.5.5v.4l6.2 3.72a.6.6 0 0 0 .6 0l6.2-3.72V5a.5.5 0 0 0-.5-.5H2Zm12.5 2.64-5.93 3.56a2.1 2.1 0 0 1-2.14 0L1.5 7.14V11a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5V7.14Z"></path>
 </svg>
-<script>
-var username = "martin.treiber";
-var hostname = "tu-dresden.de";
-var linktext = username + "@" + hostname ;
-document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-</script> &middot; <svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+<a href="mailto:martin.treiber@tu-dresden.de">martin.treiber@tu-dresden.de</a> &middot; <svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
   <path d="M8.53 1.22a.75.75 0 0 0-1.06 0l-6.25 6.25a.75.75 0 1 0 1.06 1.06L3 7.81V14a1 1 0 0 0 1 1h3.25v-4h1.5v4H12a1 1 0 0 0 1-1V7.81l.72.72a.75.75 0 1 0 1.06-1.06L8.53 1.22Z"></path>
 </svg><a href="https://mtreiber.de"> www.mtreiber.de</a>
 </p>
@@ -269,12 +266,7 @@ document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" +
 <p><svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
   <path d="M2 3h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm0 1.5a.5.5 0 0 0-.5.5v.4l6.2 3.72a.6.6 0 0 0 .6 0l6.2-3.72V5a.5.5 0 0 0-.5-.5H2Zm12.5 2.64-5.93 3.56a2.1 2.1 0 0 1-2.14 0L1.5 7.14V11a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5V7.14Z"></path>
 </svg>
-<script>
-var username = "book";
-var hostname = "akesting.de";
-var linktext = username + "@" + hostname ;
-document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-</script> &middot; <svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
+<a href="mailto:book@akesting.de">book@akesting.de</a> &middot; <svg class="icon contact-icon" viewBox="0 0 16 16" aria-hidden="true">
   <path d="M8.53 1.22a.75.75 0 0 0-1.06 0l-6.25 6.25a.75.75 0 1 0 1.06 1.06L3 7.81V14a1 1 0 0 0 1 1h3.25v-4h1.5v4H12a1 1 0 0 0 1-1V7.81l.72.72a.75.75 0 1 0 1.06-1.06L8.53 1.22Z"></path>
 </svg><a href="https://akesting.de"> www.akesting.de</a>
 </p>
@@ -283,9 +275,10 @@ document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" +
      </div>
   </div>
 </div>
+</main>
 
 <footer class="container-fluid text-center">
-  <a href="#verkehrsdynamikPage" title="To Top">
+  <a href="#verkehrsdynamikPage" aria-label="Nach oben" title="Nach oben">
     <svg class="icon footer-icon" viewBox="0 0 16 16" aria-hidden="true">
       <path d="M7.47 4.47a.75.75 0 0 1 1.06 0l5 5a.75.75 0 1 1-1.06 1.06L8 6.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06l5-5Z"></path>
     </svg>
